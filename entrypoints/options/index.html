@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DSA Partner Settings</title>
+    <meta name="manifest.open_in_tab" content="true" />
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 480px; margin: 40px auto; padding: 0 16px; }
+      h1 { color: #6d28d9; }
+      label { display: block; margin-top: 16px; font-weight: 600; }
+      select, input { width: 100%; padding: 8px; margin-top: 6px; box-sizing: border-box; }
+      button { margin-top: 20px; padding: 10px 18px; background: #6d28d9; color: white; border: 0; border-radius: 8px; cursor: pointer; }
+      #status { margin-top: 12px; color: #0f766e; }
+      small { color: #555; }
+    </style>
+  </head>
+  <body>
+    <h1>DSA Partner Settings</h1>
+
+    <label for="provider">AI provider</label>
+    <select id="provider">
+      <option value="gemini">Google Gemini</option>
+      <option value="groq">Groq</option>
+    </select>
+
+    <label for="key">Your API key</label>
+    <input id="key" type="password" placeholder="Paste your key here" />
+    <small>Your key is saved only in this browser and is sent only to the AI provider.</small>
+
+    <button id="save">Save</button>
+    <div id="status"></div>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
